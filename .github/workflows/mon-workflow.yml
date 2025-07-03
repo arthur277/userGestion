@@ -1,0 +1,12 @@
+name: Test Planifié
+
+on:
+  schedule:
+    - cron: '0 9 * * *'  # tous les jours à 6h UTC
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Pipeline lancé !"
